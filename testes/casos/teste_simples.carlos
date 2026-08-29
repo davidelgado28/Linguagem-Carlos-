@@ -1,1 +1,19 @@
+#include <carlinho.h>
 
+int somar(int a, int b) {
+    return a + b
+}
+
+int main() {
+    int resultado = somar(2, 3)
+    cout << resultado << "\n"
+
+    int vetor[3] = {10, 20, 30}
+    cout << vetor[1] << "\n"
+
+    map<string, int> pontos
+    pontos["carlos"] = 100
+    cout << pontos["carlos"] << "\n"
+
+    return 0
+}
