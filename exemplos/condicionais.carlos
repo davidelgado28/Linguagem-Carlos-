@@ -1,1 +1,31 @@
+#include <carlinho.h>
 
+int main() {
+    int idade = 15
+
+    if idade >= 18:
+        cout << "Adulto" << "\n"
+    elif idade >= 12:
+        cout << "Adolescente" << "\n"
+    else:
+        cout << "Criança" << "\n"
+
+    // match
+    int opcao = 2
+    match (opcao) {
+        case 1:
+            cout << "Um" << "\n"
+            break
+        case 2:
+            cout << "Dois" << "\n"
+            break
+        case _:
+            cout << "Outro" << "\n"
+    }
+    // Operadores lógicos
+    bool tem_carteira = true
+    if idade >= 18 && tem_carteira:
+        cout << "Pode dirigir" << "\n"
+
+    return 0
+}
