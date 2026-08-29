@@ -12,10 +12,8 @@ test:
 	bash testes/rodar_testes.sh
 
 exemplos:
-	@for ex in exemplos/*.carlos; \
-		echo "Compil ex...";bashbin/carlosc"ex...";		bash bin/carlosc "ex...";bashbin/carlosc"ex"; \
-	done
-	@echo "Todos os exemplos compilaram!"
+	@for ex in exemplos/*.carlos; do bash bin/carlosc "$$ex"; done
+	@echo "🎉 Todos os exemplos compilaram!"
 
 clean:
 	rm -f exemplos/*.cpp
