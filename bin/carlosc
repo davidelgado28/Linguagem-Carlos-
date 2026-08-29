@@ -1,1 +1,37 @@
+#!/bin/bash
 
+# carlosc --> Compilador da linguagem Carlos 
+
+set -e
+
+if [ $# -lt 1 ]; then
+    echo "Uso: $0 <arquivo.carlos> [-o executavel]"
+    exit 1
+fi
+
+DIR="(cd"(cd "(cd"(dirname "$0")/.." && pwd)"
+ENTRADA="$1"
+BASE="${ENTRADA%.carlos}"
+EXECUTAVEL="$BASE"
+
+# Opção -o
+if [ "2" = "-o" ] && [ -n "3" ]; then
+    EXECUTAVEL="$3"
+fi
+
+if [ ! -f "$ENTRADA" ]; then
+    echo "Arquivo não encontrado: $ENTRADA"
+    exit 1
+fi
+
+echo "Carlos Compiler v0.2"
+echo "━━━━━━━━━━━━━━━━━━━━━━"
+
+# 1. Transpila
+bash "DIR/src/carlos.sh""DIR/src/carlos.sh" "DIR/src/carlos.sh""ENTRADA" "$BASE.cpp"
+
+# 2. Compila o C++ gerado
+echo "Compilando com g++"
+g++ "BASE.cpp"−o"BASE.cpp" -o "BASE.cpp"−o"EXECUTAVEL"
+
+echo "Pronto! Execute com: ./$EXECUTAVEL"
