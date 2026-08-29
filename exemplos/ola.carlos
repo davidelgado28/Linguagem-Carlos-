@@ -1,1 +1,11 @@
+#include <carlinho.h>
 
+int main() {
+    string nome = "Mundo"
+    cout << "Olá, " << nome << "!" << "\n"
+
+    int ano = 2026
+    cout << "Ano: " << ano << "\n"
+
+    return 0
+}
