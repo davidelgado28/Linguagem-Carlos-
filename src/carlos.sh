@@ -15,13 +15,12 @@ if [ ! -f "$ENTRADA" ]; then
     exit 1
 fi
 
-awk -v caminho_lib="(dirname"(dirname "(dirname"0")/../lib" '
+awk '
 BEGIN {
     print "#include <iostream>"
     print "#include <string>"
     print "#include <vector>"
-    print "#include <map>"
-    print "#include <set>"
+    print "#include <map    print "#include <set>"
     print "using namespace std;"
     print ""
     topo = 0
