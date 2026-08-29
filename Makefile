@@ -6,15 +6,15 @@ install:
 	install -m 755 bin/carlosc $(PREFIX)/bin/carlosc
 	install -m 755 src/carlos.sh $(PREFIX)/bin/carlos-transpilador
 	install -m 644 lib/carlinho.h $(PREFIX)/include/carlinho.h
-	@echo "🎉 Carlos instalado! Use: carlosc programa.carlos"
+	@echo "Carlos instalado! Use: carlosc programa.carlos"
 
 test:
 	bash testes/rodar_testes.sh
 
 exemplos:
 	@for ex in exemplos/*.carlos; do \
-		echo "🔧 Compilando ex..."; bashbin/carlosc"ex..."; \
-		bash bin/carlosc "ex..."; bashbin/carlosc"ex" || exit 1; \
+		echo "Compilando exemplo"; bashbin/carlosc"ex..."; \
+		bash bin/carlosc "exemplo"; bashbin/carlosc"ex" || exit 1; \
 	done
 	@echo "Todos os exemplos compilaram!"
 
