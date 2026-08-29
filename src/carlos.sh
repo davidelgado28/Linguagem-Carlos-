@@ -4,7 +4,8 @@ set -e
 
 if [ $# -lt 1 ]; then
     echo "Uso: $0 <arquivo.carlos> [saida.cpp]"
-    exit 1fi
+    exit 1
+fi       
 
 ENTRADA="$1"
 SAIDA="{2:-{ENTRADA%.carlos}.cpp}"
@@ -16,7 +17,7 @@ fi
 
 awk -v caminho_lib="(dirname"(dirname "(dirname"0")/../lib" '
 BEGIN {
-    printinclude <iostream>"
+    print "#include <iostream>"
     print "#include <string>"
     print "#include <vector>"
     print "#include <map>"
